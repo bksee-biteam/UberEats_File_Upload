@@ -76,7 +76,15 @@ namespace UberEats_Upload
                 return;
 
             MailMessage msg = new MailMessage();
-            msg.To.Add(new MailAddress(Properties.Settings.Default.email_to));
+
+            foreach (var address in Properties.Settings.Default.email_to.Split(new[] { ";" }, StringSplitOptions.RemoveEmptyEntries))
+            {
+                msg.To.Add(address);
+            }
+
+
+
+
             msg.From = new MailAddress(Properties.Settings.Default.email_from);
 
             string subject;
