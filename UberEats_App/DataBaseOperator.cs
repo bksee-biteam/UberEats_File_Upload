@@ -12,6 +12,7 @@ namespace UberEats_Upload
 
         private short numberOfRetryAttemmpts = 3;
         private int numberOfDeletedRows;
+        private int executionTimeOut = 360;
 
         protected void Insert(DataTable _table, string Tablename)
         {
@@ -32,6 +33,7 @@ namespace UberEats_Upload
 
 
                 bulkCopy.DestinationTableName = Tablename;
+                bulkCopy.BulkCopyTimeout = executionTimeOut;
 
                 do
                 {
@@ -51,7 +53,7 @@ namespace UberEats_Upload
                     catch (Exception e)
                     {
 
-                        Thread.Sleep(10);// Thread.Sleep(100 * 100);
+                       Thread.Sleep(100 * 100);
 
                         numberOfRetryAttemmpts -= 1;
 
@@ -102,6 +104,7 @@ namespace UberEats_Upload
                     {
 
                         cmd.CommandType = CommandType.Text;
+                        cmd.CommandTimeout = executionTimeOut;
 
                         numberOfDeletedRows = cmd.ExecuteNonQuery();
 
@@ -143,14 +146,14 @@ namespace UberEats_Upload
                 using (SqlConnection connect_db = new SqlConnection(MyGlobals.DatabaseConnectionStr))
                 {
                     
-                    using (var command = new SqlCommand(procedureName, connect_db)
+                    using (var cmd = new SqlCommand(procedureName, connect_db)
                     {
                         CommandType = CommandType.StoredProcedure
                     })
                     {
                         connect_db.Open();
-                        command.CommandTimeout = 600;
-                        command.ExecuteNonQuery();
+                        cmd.CommandTimeout = executionTimeOut;
+                        cmd.ExecuteNonQuery();
                     }
 
 

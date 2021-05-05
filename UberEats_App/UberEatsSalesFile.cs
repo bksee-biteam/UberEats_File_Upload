@@ -139,7 +139,6 @@ namespace UberEats_Upload
 
                 if (uberData.table.Rows.Count > 0)
                 {
-                    //uberData.DeleteExistingDataFromDb(store_number, OrderDate, lastBusinessDate);
                     uberData.SaveToDb();
                 }
 

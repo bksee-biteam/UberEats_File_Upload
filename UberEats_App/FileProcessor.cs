@@ -41,18 +41,32 @@ namespace UberEats_Upload
 
             foreach (FileInfo fi in workingDir.GetFiles())
             {
-                 UberEatsSalesFile uberEatsFile = new UberEatsSalesFile(fi.FullName);
-
-                LogFile.SaveAppLog(string.Format(Environment.NewLine +$"**************************Processing file {fi.Name}. File number {fileNum}/{totalNumberOfFiles}"));
-
-                 uberEatsFile.ProcessFile();
-
-               if(uberEatsFile.fileIgnored)
+                try
                 {
-                   File.Move(fi.FullName, fi.FullName + "_IGNORED.txt");
+                    UberEatsSalesFile uberEatsFile = new UberEatsSalesFile(fi.FullName);
+
+                    LogFile.SaveAppLog(string.Format(Environment.NewLine + $"**************************Processing file {fi.Name}. File number {fileNum}/{totalNumberOfFiles}"));
+
+
+                    fileNum += 1;
+
+                    uberEatsFile.ProcessFile();
+
+
+                    
+
+                    if (uberEatsFile.fileIgnored)
+                    {
+                        File.Move(fi.FullName, fi.FullName + "_IGNORED.txt");
+                    }
+
                 }
 
-                fileNum += 1;
+                catch (Exception e)
+                {
+                    LogFile.SaveErrorLog($"Application failed processing file {fi.FullName}  Reason for failure : {e.Message}");
+                }
+
 
             }
             postProcessingCleanUp();
