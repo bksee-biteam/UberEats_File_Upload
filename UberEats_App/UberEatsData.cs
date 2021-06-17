@@ -32,8 +32,29 @@ namespace UberEats_Upload
 
         public void SaveToDb()
         {
+            InsertDataToStaging(table, table.TableName);
+            Process_Staging();
+        }
+
+
+
+
+       public void InsertDataToStaging(DataTable _table, string Tablename)
+        {
             Insert(table, table.TableName);
         }
+
+
+        public void Process_Staging()
+        {
+            MoveDataFromStaging();
+            EmptyStagingTables();
+        }
+
+
+
+
+
 
         public void DeleteExistingDataFromDb (string Store_Number, string First_Business_Date, string Last_Business_Date)
         {

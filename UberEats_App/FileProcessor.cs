@@ -68,6 +68,11 @@ namespace UberEats_Upload
                 }
 
 
+
+
+               
+
+
             }
             postProcessingCleanUp();
            
@@ -84,13 +89,8 @@ namespace UberEats_Upload
         
         public void postProcessingCleanUp()
         {
-            new DataBaseOperator().MoveDataFromStaging();
-
-
             ArchiveWorkingDir();
-            ClearDirs();
-
-           
+            ClearDirs(); 
         }
         
 

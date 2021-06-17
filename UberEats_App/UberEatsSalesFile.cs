@@ -56,7 +56,7 @@ namespace UberEats_Upload
 
             if (TargetTableName == "UBER_EATS_FRANCE_BELGIUM")
             {
-                reportMissingSpecialOfferFields = ReportMissingSpecialOffer(row_header);
+                reportMissingSpecialOfferFields = ReportMissingSpecialOfferField(row_header);
 
             }
 
@@ -80,7 +80,7 @@ namespace UberEats_Upload
         }
 
 
-        private bool ReportMissingSpecialOffer (List<string> rowHeaderFields)
+        private bool ReportMissingSpecialOfferField (List<string> rowHeaderFields)
         {
             return ! rowHeaderFields.Any(s => s.Contains("Special Offer on Delivery (excl VAT)")); 
         }
@@ -134,12 +134,15 @@ namespace UberEats_Upload
 
         private void saveToDb()
         {
-            foreach(UberEatsData uberData in uberDataTableList)
+            
+
+            foreach (UberEatsData uberData in uberDataTableList)
             {
 
                 if (uberData.table.Rows.Count > 0)
                 {
                     uberData.SaveToDb();
+
                 }
 
             }
