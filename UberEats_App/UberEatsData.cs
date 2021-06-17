@@ -32,6 +32,8 @@ namespace UberEats_Upload
 
         public void SaveToDb()
         {
+            EmptyStagingTables();
+
             InsertDataToStaging(table, table.TableName);
             Process_Staging();
         }
