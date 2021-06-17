@@ -9,7 +9,7 @@ CREATE TABLE [dbo].[UBER_EATS_FRANCE_BELGIUM]
 ,[Store_Name]                                        varchar(150)
 ,[Store_ID]                                          varchar(150)
 ,[Order_Date_OR_Refund_Date]                         date 
-,[Order_Accept_Time]                                 time(0)
+,[Order_Accept_Time]                                 varchar(150)
 ,[Dining_Mode]                                       varchar(150)
 ,[Order_Channel]                                     varchar(150)
 ,[Food_Sales_excl_VAT]                               decimal(16,6)

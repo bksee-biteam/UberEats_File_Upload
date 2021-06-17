@@ -5,7 +5,7 @@
 ,[Store_ID]                                           varchar(150)
 ,[Order_ID]                                           varchar(150)
 ,[Order_Date_Or_Refund_Date]                          date
-,[Order_Accept_Time]                                  time(0)
+,[Order_Accept_Time]                                  varchar(150)
 ,[Food_Sales_excluding_tax]                           decimal(16,6)
 ,[Tax_On_Food_Sales]                                  decimal(16,6)
 ,[Food_sales_including_tax]                           decimal(16,6)
