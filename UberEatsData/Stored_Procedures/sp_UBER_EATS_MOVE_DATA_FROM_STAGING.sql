@@ -1,6 +1,4 @@
-﻿
-
-CREATE  PROCEDURE sp_UBER_EATS_MOVE_DATA_FROM_STAGING
+﻿CREATE    PROCEDURE [dbo].[sp_UBER_EATS_MOVE_DATA_FROM_STAGING]
 WITH EXECUTE as 'dbo'
 AS
 BEGIN
@@ -47,6 +45,8 @@ BEGIN TRANSACTION;
 				FROM [dbo].[UBER_EATS_FRANCE_BELGIUM] T INNER JOIN  [dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM]  S
 				ON T.Store_ID = S.Store_ID
 					AND (T.Order_Date_Or_Refund_Date = S.Order_Date_Or_Refund_Date OR (T.Payout_Date = S.Payout_Date  AND S.Order_Date_Or_Refund_Date IS NULL) )
+					--AND T.Order_Status = S.Order_Status
+					AND T.Order_ID = S.Order_ID
 			 
 				
 				
@@ -78,3 +78,7 @@ BEGIN TRANSACTION;
 
 
 END
+
+
+GO
+
