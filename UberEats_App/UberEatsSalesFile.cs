@@ -14,7 +14,9 @@ namespace UberEats_Upload
     class UberEatsSalesFile
     {
         public string fullFilePath { get; }
-       
+        public string fileName { get; }
+
+
         private IEnumerable<string> FileData;
         public bool fileIgnored = false;
 
@@ -26,10 +28,13 @@ namespace UberEats_Upload
 
 
 
-        public UberEatsSalesFile(string _filePath) : base()
+        public UberEatsSalesFile(FileInfo fi) : base()
         {
-            this.fullFilePath = _filePath;
-            fileIgnored = false;
+            fullFilePath = fi.FullName;
+            fileName = fi.Name;
+
+            fileIgnored =  fi.Name.Contains("france_belgium") || fi.Name.Contains("default") ?  false : true;
+
         }
 
 
@@ -40,6 +45,7 @@ namespace UberEats_Upload
             List<string> data_row;
             List<string> row_header;
 
+ 
 
             FileData = File.ReadLines(this.fullFilePath, Encoding.GetEncoding(28591));
             
@@ -57,7 +63,6 @@ namespace UberEats_Upload
             if (TargetTableName == "UBER_EATS_FRANCE_BELGIUM")
             {
                 reportMissingSpecialOfferFields = ReportMissingSpecialOfferField(row_header);
-
             }
 
 

@@ -43,36 +43,34 @@ namespace UberEats_Upload
             {
                 try
                 {
-                    UberEatsSalesFile uberEatsFile = new UberEatsSalesFile(fi.FullName);
+                    UberEatsSalesFile uberEatsFile = new UberEatsSalesFile(fi);
 
                     LogFile.SaveAppLog(string.Format(Environment.NewLine + $"**************************Processing file {fi.Name}. File number {fileNum}/{totalNumberOfFiles}"));
 
 
                     fileNum += 1;
 
-                    uberEatsFile.ProcessFile();
 
-
-                    
-
-                    if (uberEatsFile.fileIgnored)
-                    {
-                        File.Move(fi.FullName, fi.FullName + "_IGNORED.txt");
+                    if (!uberEatsFile.fileIgnored)
+                    { 
+                        uberEatsFile.ProcessFile(); 
                     }
+                    else
+                    {
+                        processIgnoredFile(fi.FullName);
+                    }
+
+
 
                 }
 
                 catch (Exception e)
                 {
                     LogFile.SaveErrorLog($"Application failed processing file {fi.FullName}  Reason for failure : {e.Message}");
+                    processIgnoredFile(fi.FullName);
+                
                 }
-
-
-
-
-               
-
-
+ 
             }
             postProcessingCleanUp();
            
@@ -124,6 +122,20 @@ namespace UberEats_Upload
         private void ClearDirWithOriginalFilesFromSFTP()
         {
             new DirectoryInfo(originalFilesFromSFTPolderPath).Empty(); 
+        }
+
+
+        private void processIgnoredFile(string fullFileName)
+        {
+            LogFile.SaveAppLog($"Application ignored file {fullFileName}");
+            RenameIgnoredFile(fullFileName);
+
+        }
+        
+        
+        private void RenameIgnoredFile(string fullFileName)
+        {
+            File.Move(fullFileName, fullFileName + "_IGNORED.csv");
         }
   
     }
