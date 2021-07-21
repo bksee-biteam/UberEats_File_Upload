@@ -24,7 +24,7 @@ namespace UberEats_Upload
 
 
 
-        private List<UberEatsData> uberDataTableList = new List<UberEatsData>() { new uberDefault(), new uberFranceBelgium() };
+        private List<UberEatsData> uberDataTableList = new List<UberEatsData>() { new uberDefault(), new uberFranceBelgium() , new UberEuropeMiddleEastAfrica()};
 
 
 
@@ -33,7 +33,7 @@ namespace UberEats_Upload
             fullFilePath = fi.FullName;
             fileName = fi.Name;
 
-            fileIgnored =  fi.Name.Contains("france_belgium") || fi.Name.Contains("default") ?  false : true;
+            fileIgnored =  fi.Name.Contains("france_belgium") || fi.Name.Contains("default") || fi.Name.Contains("europe_middle_east_africa") ? false : true;
 
         }
 
@@ -58,7 +58,7 @@ namespace UberEats_Upload
           
 
 
-            TargetTableName = SpecifyTableNameBasedOnFirstField(row_header[0]);
+            TargetTableName = SpecifyTableNameBasedOnFileName(fileName);
 
             if (TargetTableName == "UBER_EATS_FRANCE_BELGIUM")
             {
@@ -105,6 +105,28 @@ namespace UberEats_Upload
             }
 
         }
+
+
+        private string SpecifyTableNameBasedOnFileName(string fileName)
+        {
+
+            switch (fileName)
+            {
+                case string a when a.Contains("-default"):
+                    return "UBER_EATS_DEFAULT"; 
+                
+                case string b when b.Contains("-france_belgium"):
+                return "UBER_EATS_FRANCE_BELGIUM";
+
+                case string c when c.Contains("-europe_middle_east_africa"):
+                    return "UBER_EATS_EUROPE_MIDDLE_EAST_AFRICA";
+
+                default:
+                    return "TABLE_NOT_SPECIFIED";
+            }
+
+        }
+
 
         private void AddDataRowToTable(List<string> datarow_, string table_name_)
         {

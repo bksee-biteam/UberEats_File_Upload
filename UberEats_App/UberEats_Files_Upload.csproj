@@ -86,6 +86,7 @@
     <Compile Include="DataBaseOperator.cs" />
     <Compile Include="FileProcessor.cs" />
     <Compile Include="FtpsFileProcessor.cs" />
+    <Compile Include="UberEatsDataClasses\UberEuropeMiddleEastAfrica.cs" />
     <Compile Include="UberEatsDataClasses\uberFranceBelgium.cs" />
     <Compile Include="ZipFileProcessor.cs" />
     <Compile Include="LogFile.cs" />

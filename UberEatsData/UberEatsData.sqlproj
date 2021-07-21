@@ -66,5 +66,7 @@
     <Build Include="UBER_FRANCE_BELGIUM.sql" />
     <Build Include="Stored_Procedures\sp_UBER_EATS_MOVE_DATA_FROM_STAGING.sql" />
     <Build Include="Stored_Procedures\sp_UBER_EATS_REMOVE_DATA_FROM_STAGING.sql" />
+    <Build Include="STAGING_UBER_EATS_EUROPE_MIDDLE_EAST_AFRICA.sql" />
+    <Build Include="UBER_EATS_EUROPE_MIDDLE_EAST_AFRICA.sql" />
   </ItemGroup>
 </Project>
