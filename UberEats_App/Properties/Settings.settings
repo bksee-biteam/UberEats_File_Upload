@@ -5,41 +5,8 @@
     <Setting Name="Setting" Type="System.String" Scope="Application">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="file_path" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">C:\GitHub\Oracle_Files\SFTP_FILES\</Value>
-    </Setting>
-    <Setting Name="log_path" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">C:\UberEatsFiles\03_Logs\</Value>
-    </Setting>
-    <Setting Name="folder_path" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">C:\GitHub\Oracle_Files\SFTP_FILES\</Value>
-    </Setting>
-    <Setting Name="WorkingDir" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">C:\UberEatsFiles\WorkingDirectory</Value>
-    </Setting>
-    <Setting Name="ArchiveDir" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">C:\UberEatsFiles\ArchiveFiles</Value>
-    </Setting>
-    <Setting Name="FilesFromFTPS" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">C:\UberEatsFiles\UberEatsFilesFromFTPS</Value>
-    </Setting>
     <Setting Name="sendEmail" Type="System.String" Scope="Application">
       <Value Profile="(Default)">N</Value>
-    </Setting>
-    <Setting Name="ErrorDir" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">C:\GitHub\Oracle_Files\InValidZipFiles\</Value>
-    </Setting>
-    <Setting Name="dba_username" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">X</Value>
-    </Setting>
-    <Setting Name="dba_name" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">X</Value>
-    </Setting>
-    <Setting Name="dba_hostname" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">X</Value>
-    </Setting>
-    <Setting Name="dba_password" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">test</Value>
     </Setting>
     <Setting Name="email_to" Type="System.String" Scope="Application">
       <Value Profile="(Default)">XXX@XXXX.com</Value>
@@ -64,6 +31,39 @@
     </Setting>
     <Setting Name="RemoveFilesFromFTPS_AfterDownload" Type="System.Boolean" Scope="Application">
       <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="file_path" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\Users\mgolendzinowski\Desktop\20210906 UberEats_FileUpload\foldery\file_path\</Value>
+    </Setting>
+    <Setting Name="log_path" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\Users\mgolendzinowski\Desktop\20210906 UberEats_FileUpload\foldery\log_path\</Value>
+    </Setting>
+    <Setting Name="folder_path" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\Users\mgolendzinowski\Desktop\20210906 UberEats_FileUpload\foldery\folder_path\</Value>
+    </Setting>
+    <Setting Name="WorkingDir" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\Users\mgolendzinowski\Desktop\20210906 UberEats_FileUpload\foldery\WorkinDir\</Value>
+    </Setting>
+    <Setting Name="ArchiveDir" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\Users\mgolendzinowski\Desktop\20210906 UberEats_FileUpload\foldery\ArchiveDir\</Value>
+    </Setting>
+    <Setting Name="FilesFromFTPS" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\Users\mgolendzinowski\Desktop\20210906 UberEats_FileUpload\foldery\FilesFromFTPS\</Value>
+    </Setting>
+    <Setting Name="ErrorDir" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\Users\mgolendzinowski\Desktop\20210906 UberEats_FileUpload\foldery\ErrorDir\</Value>
+    </Setting>
+    <Setting Name="dba_username" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">test</Value>
+    </Setting>
+    <Setting Name="dba_name" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">CNC</Value>
+    </Setting>
+    <Setting Name="dba_hostname" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">localhost</Value>
+    </Setting>
+    <Setting Name="dba_password" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Burger2020!@#</Value>
     </Setting>
   </Settings>
 </SettingsFile>

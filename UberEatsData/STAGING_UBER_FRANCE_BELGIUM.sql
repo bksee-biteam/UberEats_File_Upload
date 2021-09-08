@@ -61,7 +61,7 @@ CREATE TABLE [dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM]
 ,[Payout]                                            decimal(16,6)
 ,[Payout_Date]                                       date
 ,[Order_Status]                                      varchar(150)
-	 
+,[Payout_reference_ID]								varchar(150)
 
   
 ,[T_Filename]						 varchar(255)

@@ -1,0 +1,3461 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataSchemaModel FileFormatVersion="1.2" SchemaVersion="2.9" DspName="Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider" CollationLcid="1033" CollationCaseSensitive="False" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+	<Header>
+		<CustomData Category="AnsiNulls">
+			<Metadata Name="AnsiNulls" Value="True" />
+		</CustomData>
+		<CustomData Category="QuotedIdentifier">
+			<Metadata Name="QuotedIdentifier" Value="True" />
+		</CustomData>
+		<CustomData Category="CompatibilityMode">
+			<Metadata Name="CompatibilityMode" Value="130" />
+		</CustomData>
+		<CustomData Category="Reference" Type="Assembly">
+			<Metadata Name="LogicalName" Value="UberEatsData.dll" />
+			<Metadata Name="FileName" Value="C:\USERS\MGOLENDZINOWSKI\DESKTOP\20210906 UBEREATS_FILEUPLOAD\UBEREATS_FILE_UPLOAD-MAIN - TEST\UBEREATSDATA\OBJ\DEBUG\UBEREATSDATA.DLL" />
+			<Metadata Name="AssemblyName" Value="UberEatsData" />
+			<Metadata Name="PermissionSet" Value="SAFE" />
+			<Metadata Name="Owner" Value="" />
+			<Metadata Name="GenerateSqlClrDdl" Value="True" />
+			<Metadata Name="IsVisible" Value="True" />
+			<Metadata Name="IsModelAware" Value="True" />
+			<Metadata Name="SkipCreationIfEmpty" Value="True" />
+			<Metadata Name="AssemblySymbolsName" Value="C:\Users\mgolendzinowski\Desktop\20210906 UberEats_FileUpload\UberEats_File_Upload-main - test\UberEatsData\obj\Debug\UberEatsData.pdb" />
+		</CustomData>
+		<CustomData Category="SqlCmdVariables" Type="SqlCmdVariable" />
+	</Header>
+	<Model>
+		<Element Type="SqlDatabaseOptions">
+			<Property Name="Collation" Value="SQL_Latin1_General_CP1_CI_AS" />
+			<Property Name="IsAnsiNullDefaultOn" Value="True" />
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Property Name="IsAnsiWarningsOn" Value="True" />
+			<Property Name="IsArithAbortOn" Value="True" />
+			<Property Name="IsConcatNullYieldsNullOn" Value="True" />
+			<Property Name="IsTornPageProtectionOn" Value="False" />
+			<Property Name="IsFullTextEnabled" Value="True" />
+			<Property Name="PageVerifyMode" Value="3" />
+			<Property Name="DefaultLanguage" Value="" />
+			<Property Name="DefaultFullTextLanguage" Value="" />
+			<Property Name="QueryStoreStaleQueryThreshold" Value="367" />
+			<Relationship Name="DefaultFilegroup">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlDefaultConstraint" Name="[dbo].[DF_dbo_STAGING_UBER_EATS_DEFAULT_T_Created_TS]">
+			<Property Name="DefaultExpressionScript">
+				<Value><![CDATA[(getdate())]]></Value>
+			</Property>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_DEFAULT]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForColumn">
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_DEFAULT].[T_Created_TS]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlDefaultConstraint" Name="[dbo].[DF_dbo_STAGING_UBER_FRANCE_BELGIUM_T_Created_TS]">
+			<Property Name="DefaultExpressionScript">
+				<Value><![CDATA[(getdate())]]></Value>
+			</Property>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForColumn">
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[T_Created_TS]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlDefaultConstraint" Name="[dbo].[DF_dbo_UBER_EATS_DEFAULT_Store_ID]">
+			<Property Name="DefaultExpressionScript">
+				<Value><![CDATA[('N/A')]]></Value>
+			</Property>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_DEFAULT]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForColumn">
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_DEFAULT].[Store_ID]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlDefaultConstraint" Name="[dbo].[DF_dbo_UBER_EATS_DEFAULT_T_Created_TS]">
+			<Property Name="DefaultExpressionScript">
+				<Value><![CDATA[(getdate())]]></Value>
+			</Property>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_DEFAULT]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForColumn">
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_DEFAULT].[T_Created_TS]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlDefaultConstraint" Name="[dbo].[DF_dbo_UBER_FRANCE_BELGIUM_Store_ID]">
+			<Property Name="DefaultExpressionScript">
+				<Value><![CDATA[('N/A')]]></Value>
+			</Property>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_FRANCE_BELGIUM]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForColumn">
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Store_ID]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlDefaultConstraint" Name="[dbo].[DF_dbo_UBER_FRANCE_BELGIUM_T_Created_TS]">
+			<Property Name="DefaultExpressionScript">
+				<Value><![CDATA[(getdate())]]></Value>
+			</Property>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_FRANCE_BELGIUM]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForColumn">
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[T_Created_TS]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[sp_UBER_EATS_MOVE_DATA_FROM_STAGING]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+
+BEGIN TRANSACTION;
+
+		BEGIN TRY
+		
+
+
+
+		
+				-------------UBER_EATS_DEFAULT-------------------
+				
+				
+				
+				--DELETE 
+				
+				DELETE T
+				FROM [dbo].[UBER_EATS_DEFAULT] T INNER JOIN [dbo].[STAGING_UBER_EATS_DEFAULT]  S
+				ON T.Store_ID = S.Store_ID
+				AND (T.Order_Date_Or_Refund_Date = S.Order_Date_Or_Refund_Date OR (T.Payout_Date = S.Payout_Date  AND S.Order_Date_Or_Refund_Date IS NULL) )
+
+				
+				
+				---INSERT
+				
+				
+				INSERT INTO [dbo].[UBER_EATS_DEFAULT] WITH(TABLOCK)
+				(Store_Name, Store_ID, Order_ID, Order_Date_Or_Refund_Date, Order_Accept_Time, Food_Sales_excluding_tax, Tax_On_Food_Sales, Food_sales_including_tax, Adjustments_excluding_tax, Tax_on_Adjustments, Promo_Spend_On_Food, Total_Sales_After_Adjustments_including_tax, Uber_Service_Fee, Dispatch_Fee, Tax_On_Dispatch_Fee, Misc_Payment_Description, Miscellaneous_Payments, Payout, Payout_Date, Order_Status, T_Filename, T_Created_TS)
+				
+				Select Store_Name, Store_ID, Order_ID, Order_Date_Or_Refund_Date, Order_Accept_Time, Food_Sales_excluding_tax, Tax_On_Food_Sales, Food_sales_including_tax, Adjustments_excluding_tax, Tax_on_Adjustments, Promo_Spend_On_Food, Total_Sales_After_Adjustments_including_tax, Uber_Service_Fee, Dispatch_Fee, Tax_On_Dispatch_Fee, Misc_Payment_Description, Miscellaneous_Payments, Payout, Payout_Date, Order_Status, T_Filename, T_Created_TS
+				FROM [dbo].[STAGING_UBER_EATS_DEFAULT]
+				WHERE  Store_Name like '%Tacos%';    /* Temporarly take data only from O'tacos */
+				
+				
+				
+				-------------UBER_EATS_FRANCE_BELGIUM-------------------
+				
+				
+				--DELETE 
+				
+				DELETE T
+				FROM [dbo].[UBER_EATS_FRANCE_BELGIUM] T INNER JOIN  [dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM]  S
+				ON T.Store_ID = S.Store_ID
+					AND (T.Order_Date_Or_Refund_Date = S.Order_Date_Or_Refund_Date OR (T.Payout_Date = S.Payout_Date  AND S.Order_Date_Or_Refund_Date IS NULL) )
+					--AND T.Order_Status = S.Order_Status
+					AND T.Order_ID = S.Order_ID
+			 
+				
+				
+				---INSERT
+				
+	 			INSERT INTO [dbo].[UBER_EATS_FRANCE_BELGIUM] WITH(TABLOCK)
+				(Order_ID,Workflow_ID,Store_Name,Store_ID,Order_Date_OR_Refund_Date,Order_Accept_Time,Dining_Mode,Order_Channel,Food_Sales_excl_VAT,VAT1_on_Food_Sales,VAT2_on_Food_Sales,VAT3_on_Food_Sales,Food_Sales_incl_VAT,Discount_onFood_excl_VAT,VAT_1_on_Discount_on_Food,VAT_2_on_Discount_on_Food,VAT_2_on_Discount_on_Food_,Discount_on_Food_incl_VAT,Marketing_Service_Fee_Adjustment,Price_Adjustments_excluding_VAT,Payout_from_3rd_party,[3rd_party_payor],VAT_on_Price_Adjustments,Price_Adjustments_Including_VAT,Delivery_Fee_excl_VAT,VAT1_on_Delivery_Fee,VAT2_on_Delivery_Fee,VAT3_on_Delivery_Fee,Delivery_Fee_incl_VAT, [Special_Offer_On_Delivery_excl_VAT],[VAT_On Special Offer_On_Delivery],[Special_Offer_On_Delivery_incl_VAT], 	Total_Order_incl_VAT,Restaurant_to_Customer_Invoice_Link,Cost_of_Delivery_excl_VAT,VAT_on_cost_of_delivery,Cost_of_Delivery_incl_VAT,Courier_to_Restaurant_Invoice_Link,Uber_Service_Fees_before_Discount_ex_VAT,Service_Fee_Discount_ex_VAT,Uber_Service_Fee_after_Discount_ex_VAT,VAT_on_Uber_Service_Fees_after_Discount,Uber_Service_Fee_after_Discount_incl_VAT,Uber_to_Restaurant_Invoice_Link,VAT_Adjustment,Profit_on_Delivery,Gratuity,Misc_Payment_Description,Misc_Payments_incl_VAT,Payout,Payout_Date,Order_Status, Payout_reference_ID,T_Filename,T_Created_TS)
+				
+				SELECT Order_ID,Workflow_ID,Store_Name,Store_ID,Order_Date_OR_Refund_Date,Order_Accept_Time,Dining_Mode,Order_Channel,Food_Sales_excl_VAT,VAT1_on_Food_Sales,VAT2_on_Food_Sales,VAT3_on_Food_Sales,Food_Sales_incl_VAT,Discount_onFood_excl_VAT,VAT_1_on_Discount_on_Food,VAT_2_on_Discount_on_Food,VAT_2_on_Discount_on_Food_,Discount_on_Food_incl_VAT,Marketing_Service_Fee_Adjustment,Price_Adjustments_excluding_VAT,Payout_from_3rd_party,3rd_party_payor,VAT_on_Price_Adjustments,Price_Adjustments_Including_VAT,Delivery_Fee_excl_VAT,VAT1_on_Delivery_Fee,VAT2_on_Delivery_Fee,VAT3_on_Delivery_Fee,Delivery_Fee_incl_VAT,[Special_Offer_On_Delivery_excl_VAT],[VAT_On Special Offer_On_Delivery],[Special_Offer_On_Delivery_incl_VAT] ,Total_Order_incl_VAT,'' AS Restaurant_to_Customer_Invoice_Link,Cost_of_Delivery_excl_VAT,VAT_on_cost_of_delivery,Cost_of_Delivery_incl_VAT,'' AS Courier_to_Restaurant_Invoice_Link,Uber_Service_Fees_before_Discount_ex_VAT,Service_Fee_Discount_ex_VAT,Uber_Service_Fee_after_Discount_ex_VAT,VAT_on_Uber_Service_Fees_after_Discount,Uber_Service_Fee_after_Discount_incl_VAT,'' AS Uber_to_Restaurant_Invoice_Link,VAT_Adjustment,Profit_on_Delivery,Gratuity,Misc_Payment_Description,Misc_Payments_incl_VAT,Payout,Payout_Date,Order_Status, Payout_reference_ID,T_Filename,T_Created_TS
+				FROM [dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM]
+				WHERE  Store_Name like '%Tacos%'; /* Temporarly take data only from O'tacos */
+		
+		
+		COMMIT TRANSACTION;
+		
+		END TRY
+		
+		
+		BEGIN CATCH
+		
+				IF @@TRANCOUNT > 0
+				BEGIN
+					ROLLBACK TRANSACTION;
+				END
+		
+		
+		END CATCH
+
+
+
+END]]></Value>
+			</Property>
+			<Property Name="IsCaller" Value="False" />
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_DEFAULT]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_DEFAULT]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_DEFAULT].[Store_ID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_DEFAULT].[Store_ID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_DEFAULT].[Order_Date_Or_Refund_Date]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_DEFAULT].[Order_Date_Or_Refund_Date]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_DEFAULT].[Payout_Date]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_DEFAULT].[Payout_Date]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_DEFAULT].[Store_Name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_DEFAULT].[Store_ID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_DEFAULT].[Order_ID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_DEFAULT].[Order_Date_Or_Refund_Date]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_DEFAULT].[Order_Accept_Time]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_DEFAULT].[Food_Sales_excluding_tax]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_DEFAULT].[Tax_On_Food_Sales]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_DEFAULT].[Food_sales_including_tax]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_DEFAULT].[Adjustments_excluding_tax]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_DEFAULT].[Tax_on_Adjustments]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_DEFAULT].[Promo_Spend_On_Food]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_DEFAULT].[Total_Sales_After_Adjustments_including_tax]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_DEFAULT].[Uber_Service_Fee]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_DEFAULT].[Dispatch_Fee]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_DEFAULT].[Tax_On_Dispatch_Fee]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_DEFAULT].[Misc_Payment_Description]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_DEFAULT].[Miscellaneous_Payments]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_DEFAULT].[Payout]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_DEFAULT].[Payout_Date]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_DEFAULT].[Order_Status]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_DEFAULT].[T_Filename]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_DEFAULT].[T_Created_TS]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_DEFAULT].[Store_Name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_DEFAULT].[Store_ID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_DEFAULT].[Order_ID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_DEFAULT].[Order_Date_Or_Refund_Date]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_DEFAULT].[Order_Accept_Time]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_DEFAULT].[Food_Sales_excluding_tax]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_DEFAULT].[Tax_On_Food_Sales]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_DEFAULT].[Food_sales_including_tax]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_DEFAULT].[Adjustments_excluding_tax]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_DEFAULT].[Tax_on_Adjustments]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_DEFAULT].[Promo_Spend_On_Food]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_DEFAULT].[Total_Sales_After_Adjustments_including_tax]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_DEFAULT].[Uber_Service_Fee]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_DEFAULT].[Dispatch_Fee]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_DEFAULT].[Tax_On_Dispatch_Fee]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_DEFAULT].[Misc_Payment_Description]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_DEFAULT].[Miscellaneous_Payments]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_DEFAULT].[Payout]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_DEFAULT].[Payout_Date]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_DEFAULT].[Order_Status]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_DEFAULT].[T_Filename]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_DEFAULT].[T_Created_TS]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_FRANCE_BELGIUM]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Store_ID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Store_ID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Order_Date_OR_Refund_Date]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Order_Date_OR_Refund_Date]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Payout_Date]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Payout_Date]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Order_ID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Order_ID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Order_ID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Workflow_ID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Store_Name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Store_ID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Order_Date_OR_Refund_Date]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Order_Accept_Time]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Dining_Mode]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Order_Channel]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Food_Sales_excl_VAT]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[VAT1_on_Food_Sales]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[VAT2_on_Food_Sales]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[VAT3_on_Food_Sales]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Food_Sales_incl_VAT]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Discount_onFood_excl_VAT]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[VAT_1_on_Discount_on_Food]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[VAT_2_on_Discount_on_Food]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[VAT_2_on_Discount_on_Food_]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Discount_on_Food_incl_VAT]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Marketing_Service_Fee_Adjustment]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Price_Adjustments_excluding_VAT]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Payout_from_3rd_party]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[3rd_party_payor]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[VAT_on_Price_Adjustments]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Price_Adjustments_Including_VAT]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Delivery_Fee_excl_VAT]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[VAT1_on_Delivery_Fee]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[VAT2_on_Delivery_Fee]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[VAT3_on_Delivery_Fee]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Delivery_Fee_incl_VAT]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Special_Offer_On_Delivery_excl_VAT]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[VAT_On Special Offer_On_Delivery]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Special_Offer_On_Delivery_incl_VAT]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Total_Order_incl_VAT]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Restaurant_to_Customer_Invoice_Link]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Cost_of_Delivery_excl_VAT]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[VAT_on_cost_of_delivery]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Cost_of_Delivery_incl_VAT]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Courier_to_Restaurant_Invoice_Link]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Uber_Service_Fees_before_Discount_ex_VAT]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Service_Fee_Discount_ex_VAT]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Uber_Service_Fee_after_Discount_ex_VAT]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[VAT_on_Uber_Service_Fees_after_Discount]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Uber_Service_Fee_after_Discount_incl_VAT]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Uber_to_Restaurant_Invoice_Link]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[VAT_Adjustment]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Profit_on_Delivery]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Gratuity]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Misc_Payment_Description]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Misc_Payments_incl_VAT]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Payout]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Payout_Date]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Order_Status]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Payout_reference_ID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[T_Filename]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[T_Created_TS]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Order_ID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Workflow_ID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Store_Name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Store_ID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Order_Date_OR_Refund_Date]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Order_Accept_Time]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Dining_Mode]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Order_Channel]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Food_Sales_excl_VAT]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[VAT1_on_Food_Sales]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[VAT2_on_Food_Sales]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[VAT3_on_Food_Sales]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Food_Sales_incl_VAT]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Discount_onFood_excl_VAT]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[VAT_1_on_Discount_on_Food]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[VAT_2_on_Discount_on_Food]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[VAT_2_on_Discount_on_Food_]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Discount_on_Food_incl_VAT]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Marketing_Service_Fee_Adjustment]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Price_Adjustments_excluding_VAT]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Payout_from_3rd_party]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[VAT_on_Price_Adjustments]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Price_Adjustments_Including_VAT]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Delivery_Fee_excl_VAT]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[VAT1_on_Delivery_Fee]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[VAT2_on_Delivery_Fee]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[VAT3_on_Delivery_Fee]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Delivery_Fee_incl_VAT]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Special_Offer_On_Delivery_excl_VAT]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[VAT_On Special Offer_On_Delivery]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Special_Offer_On_Delivery_incl_VAT]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Total_Order_incl_VAT]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Cost_of_Delivery_excl_VAT]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[VAT_on_cost_of_delivery]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Cost_of_Delivery_incl_VAT]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Uber_Service_Fees_before_Discount_ex_VAT]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Service_Fee_Discount_ex_VAT]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Uber_Service_Fee_after_Discount_ex_VAT]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[VAT_on_Uber_Service_Fees_after_Discount]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Uber_Service_Fee_after_Discount_incl_VAT]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[VAT_Adjustment]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Profit_on_Delivery]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Gratuity]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Misc_Payment_Description]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Misc_Payments_incl_VAT]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Payout]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Payout_Date]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Order_Status]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Payout_reference_ID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[T_Filename]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[T_Created_TS]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="User">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="CreateOffset" Value="6" />
+				<Property Name="Length" Value="5123" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;CREATE     PROCEDURE [dbo].[sp_UBER_EATS_MOVE_DATA_FROM_STAGING]&#xD;&#xA;WITH EXECUTE as 'dbo'&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[sp_UBER_EATS_REMOVE_DATA_FROM_STAGING]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+
+BEGIN
+	 			 
+				TRUNCATE TABLE [dbo].[STAGING_UBER_EATS_DEFAULT];
+				TRUNCATE TABLE [dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM];
+END]]></Value>
+			</Property>
+			<Property Name="IsCaller" Value="False" />
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_DEFAULT]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="User">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="CreateOffset" Value="2" />
+				<Property Name="Length" Value="230" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="&#xD;&#xA;CREATE PROCEDURE [dbo].[sp_UBER_EATS_REMOVE_DATA_FROM_STAGING]&#xD;&#xA;WITH EXECUTE AS 'dbo'&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[STAGING_UBER_EATS_DEFAULT]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_DEFAULT].[Store_Name]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_DEFAULT].[Store_ID]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_DEFAULT].[Order_ID]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_DEFAULT].[Order_Date_Or_Refund_Date]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[date]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_DEFAULT].[Order_Accept_Time]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_DEFAULT].[Food_Sales_excluding_tax]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_DEFAULT].[Tax_On_Food_Sales]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_DEFAULT].[Food_sales_including_tax]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_DEFAULT].[Adjustments_excluding_tax]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_DEFAULT].[Tax_on_Adjustments]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_DEFAULT].[Promo_Spend_On_Food]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_DEFAULT].[Total_Sales_After_Adjustments_including_tax]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_DEFAULT].[Uber_Service_Fee]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_DEFAULT].[Dispatch_Fee]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_DEFAULT].[Tax_On_Dispatch_Fee]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_DEFAULT].[Misc_Payment_Description]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_DEFAULT].[Miscellaneous_Payments]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_DEFAULT].[Payout]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_DEFAULT].[Payout_Date]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[date]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_DEFAULT].[Order_Status]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_DEFAULT].[T_Filename]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="255" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_DEFAULT].[T_Created_TS]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime2]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Filegroup">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Order_ID]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Workflow_ID]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Store_Name]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Store_ID]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Order_Date_OR_Refund_Date]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[date]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Order_Accept_Time]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Dining_Mode]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Order_Channel]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Food_Sales_excl_VAT]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[VAT1_on_Food_Sales]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[VAT2_on_Food_Sales]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[VAT3_on_Food_Sales]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Food_Sales_incl_VAT]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Discount_onFood_excl_VAT]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[VAT_1_on_Discount_on_Food]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[VAT_2_on_Discount_on_Food]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[VAT_2_on_Discount_on_Food_]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Discount_on_Food_incl_VAT]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Marketing_Service_Fee_Adjustment]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Price_Adjustments_excluding_VAT]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Payout_from_3rd_party]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[3rd_party_payor]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[VAT_on_Price_Adjustments]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Price_Adjustments_Including_VAT]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Delivery_Fee_excl_VAT]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[VAT1_on_Delivery_Fee]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[VAT2_on_Delivery_Fee]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[VAT3_on_Delivery_Fee]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Delivery_Fee_incl_VAT]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Special_Offer_On_Delivery_excl_VAT]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[VAT_On Special Offer_On_Delivery]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Special_Offer_On_Delivery_incl_VAT]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Total_Order_incl_VAT]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Restaurant_to_Customer_Invoice_Link]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Cost_of_Delivery_excl_VAT]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[VAT_on_cost_of_delivery]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Cost_of_Delivery_incl_VAT]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Courier_to_Restaurant_Invoice_Link]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Uber_Service_Fees_before_Discount_ex_VAT]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Service_Fee_Discount_ex_VAT]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Uber_Service_Fee_after_Discount_ex_VAT]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[VAT_on_Uber_Service_Fees_after_Discount]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Uber_Service_Fee_after_Discount_incl_VAT]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Uber_to_Restaurant_Invoice_Link]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[VAT_Adjustment]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Profit_on_Delivery]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Gratuity]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Misc_Payment_Description]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Misc_Payments_incl_VAT]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Payout]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Payout_Date]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[date]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Order_Status]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[Payout_reference_ID]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[T_Filename]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="255" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[STAGING_UBER_EATS_FRANCE_BELGIUM].[T_Created_TS]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime2]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Filegroup">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[UBER_EATS_DEFAULT]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_DEFAULT].[Store_Name]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_DEFAULT].[Store_ID]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_DEFAULT].[Order_ID]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_DEFAULT].[Order_Date_Or_Refund_Date]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[date]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_DEFAULT].[Order_Accept_Time]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_DEFAULT].[Food_Sales_excluding_tax]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_DEFAULT].[Tax_On_Food_Sales]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_DEFAULT].[Food_sales_including_tax]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_DEFAULT].[Adjustments_excluding_tax]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_DEFAULT].[Tax_on_Adjustments]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_DEFAULT].[Promo_Spend_On_Food]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_DEFAULT].[Total_Sales_After_Adjustments_including_tax]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_DEFAULT].[Uber_Service_Fee]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_DEFAULT].[Dispatch_Fee]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_DEFAULT].[Tax_On_Dispatch_Fee]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_DEFAULT].[Misc_Payment_Description]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_DEFAULT].[Miscellaneous_Payments]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_DEFAULT].[Payout]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_DEFAULT].[Payout_Date]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[date]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_DEFAULT].[Order_Status]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_DEFAULT].[T_Filename]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="255" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_DEFAULT].[T_Created_TS]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime2]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Filegroup">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlIndex" Name="[dbo].[UBER_EATS_DEFAULT].[idx_cs_uber_eats_default]">
+			<Property Name="IsClustered" Value="True" />
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[UBER_EATS_DEFAULT].[Order_Date_Or_Refund_Date]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[UBER_EATS_DEFAULT].[Store_ID]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DataCompressionOptions">
+				<Entry>
+					<Element Type="SqlDataCompressionOption">
+						<Property Name="CompressionLevel" Value="2" />
+						<Property Name="PartitionNumber" Value="1" />
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="IndexedObject">
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_DEFAULT]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[UBER_EATS_FRANCE_BELGIUM]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Order_ID]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Workflow_ID]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Store_Name]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Store_ID]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Order_Date_OR_Refund_Date]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[date]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Order_Accept_Time]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Dining_Mode]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Order_Channel]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Food_Sales_excl_VAT]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[VAT1_on_Food_Sales]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[VAT2_on_Food_Sales]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[VAT3_on_Food_Sales]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Food_Sales_incl_VAT]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Discount_onFood_excl_VAT]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[VAT_1_on_Discount_on_Food]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[VAT_2_on_Discount_on_Food]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[VAT_2_on_Discount_on_Food_]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Discount_on_Food_incl_VAT]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Marketing_Service_Fee_Adjustment]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Price_Adjustments_excluding_VAT]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Payout_from_3rd_party]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[3rd_party_payor]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[VAT_on_Price_Adjustments]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Price_Adjustments_Including_VAT]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Delivery_Fee_excl_VAT]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[VAT1_on_Delivery_Fee]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[VAT2_on_Delivery_Fee]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[VAT3_on_Delivery_Fee]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Delivery_Fee_incl_VAT]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Special_Offer_On_Delivery_excl_VAT]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[VAT_On Special Offer_On_Delivery]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Special_Offer_On_Delivery_incl_VAT]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Total_Order_incl_VAT]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Restaurant_to_Customer_Invoice_Link]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Cost_of_Delivery_excl_VAT]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[VAT_on_cost_of_delivery]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Cost_of_Delivery_incl_VAT]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Courier_to_Restaurant_Invoice_Link]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Uber_Service_Fees_before_Discount_ex_VAT]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Service_Fee_Discount_ex_VAT]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Uber_Service_Fee_after_Discount_ex_VAT]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[VAT_on_Uber_Service_Fees_after_Discount]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Uber_Service_Fee_after_Discount_incl_VAT]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Uber_to_Restaurant_Invoice_Link]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[VAT_Adjustment]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Profit_on_Delivery]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Gratuity]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Misc_Payment_Description]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Misc_Payments_incl_VAT]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Payout]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="6" />
+									<Property Name="Precision" Value="16" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Payout_Date]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[date]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Order_Status]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Payout_reference_ID]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[T_Filename]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="255" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[T_Created_TS]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime2]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Filegroup">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlIndex" Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[idx_cs_uber_eats_france_belgium]">
+			<Property Name="IsClustered" Value="True" />
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Order_Date_OR_Refund_Date]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[UBER_EATS_FRANCE_BELGIUM].[Store_ID]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DataCompressionOptions">
+				<Entry>
+					<Element Type="SqlDataCompressionOption">
+						<Property Name="CompressionLevel" Value="2" />
+						<Property Name="PartitionNumber" Value="1" />
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="IndexedObject">
+				<Entry>
+					<References Name="[dbo].[UBER_EATS_FRANCE_BELGIUM]" />
+				</Entry>
+			</Relationship>
+		</Element>
+	</Model>
+</DataSchemaModel>

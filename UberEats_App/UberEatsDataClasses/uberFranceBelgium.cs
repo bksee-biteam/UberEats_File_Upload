@@ -69,7 +69,7 @@ namespace UberEats_Upload.DataClasses
             table.Columns.Add("Payout", typeof(string));
             table.Columns.Add("Payout_Date", typeof(string));
             table.Columns.Add("Order_Status", typeof(string));
-
+            table.Columns.Add("Payout_reference_ID", typeof(string));
 
             table.Columns.Add("T_File_Name", typeof(string));
 

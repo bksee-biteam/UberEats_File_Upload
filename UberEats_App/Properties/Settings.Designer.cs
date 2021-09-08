@@ -12,7 +12,7 @@ namespace UberEats_Upload.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.4.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.8.1.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -34,109 +34,10 @@ namespace UberEats_Upload.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\GitHub\\Oracle_Files\\SFTP_FILES\\")]
-        public string file_path {
-            get {
-                return ((string)(this["file_path"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\UberEatsFiles\\03_Logs\\")]
-        public string log_path {
-            get {
-                return ((string)(this["log_path"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\GitHub\\Oracle_Files\\SFTP_FILES\\")]
-        public string folder_path {
-            get {
-                return ((string)(this["folder_path"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\UberEatsFiles\\WorkingDirectory")]
-        public string WorkingDir {
-            get {
-                return ((string)(this["WorkingDir"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\UberEatsFiles\\ArchiveFiles")]
-        public string ArchiveDir {
-            get {
-                return ((string)(this["ArchiveDir"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\UberEatsFiles\\UberEatsFilesFromFTPS")]
-        public string FilesFromFTPS {
-            get {
-                return ((string)(this["FilesFromFTPS"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("N")]
         public string sendEmail {
             get {
                 return ((string)(this["sendEmail"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\GitHub\\Oracle_Files\\InValidZipFiles\\")]
-        public string ErrorDir {
-            get {
-                return ((string)(this["ErrorDir"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("X")]
-        public string dba_username {
-            get {
-                return ((string)(this["dba_username"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("X")]
-        public string dba_name {
-            get {
-                return ((string)(this["dba_name"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("X")]
-        public string dba_hostname {
-            get {
-                return ((string)(this["dba_hostname"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("test")]
-        public string dba_password {
-            get {
-                return ((string)(this["dba_password"]));
             }
         }
         
@@ -209,6 +110,108 @@ namespace UberEats_Upload.Properties {
         public bool RemoveFilesFromFTPS_AfterDownload {
             get {
                 return ((bool)(this["RemoveFilesFromFTPS_AfterDownload"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Users\\mgolendzinowski\\Desktop\\20210906 UberEats_FileUpload\\foldery\\file_path\\")]
+        public string file_path {
+            get {
+                return ((string)(this["file_path"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Users\\mgolendzinowski\\Desktop\\20210906 UberEats_FileUpload\\foldery\\log_path\\")]
+        public string log_path {
+            get {
+                return ((string)(this["log_path"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Users\\mgolendzinowski\\Desktop\\20210906 UberEats_FileUpload\\foldery\\folder_path" +
+            "\\")]
+        public string folder_path {
+            get {
+                return ((string)(this["folder_path"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Users\\mgolendzinowski\\Desktop\\20210906 UberEats_FileUpload\\foldery\\WorkinDir\\")]
+        public string WorkingDir {
+            get {
+                return ((string)(this["WorkingDir"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Users\\mgolendzinowski\\Desktop\\20210906 UberEats_FileUpload\\foldery\\ArchiveDir\\" +
+            "")]
+        public string ArchiveDir {
+            get {
+                return ((string)(this["ArchiveDir"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Users\\mgolendzinowski\\Desktop\\20210906 UberEats_FileUpload\\foldery\\FilesFromFT" +
+            "PS\\")]
+        public string FilesFromFTPS {
+            get {
+                return ((string)(this["FilesFromFTPS"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Users\\mgolendzinowski\\Desktop\\20210906 UberEats_FileUpload\\foldery\\ErrorDir\\")]
+        public string ErrorDir {
+            get {
+                return ((string)(this["ErrorDir"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("test")]
+        public string dba_username {
+            get {
+                return ((string)(this["dba_username"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("CNC")]
+        public string dba_name {
+            get {
+                return ((string)(this["dba_name"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("localhost")]
+        public string dba_hostname {
+            get {
+                return ((string)(this["dba_hostname"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Burger2020!@#")]
+        public string dba_password {
+            get {
+                return ((string)(this["dba_password"]));
             }
         }
     }
